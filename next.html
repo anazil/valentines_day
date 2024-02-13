@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .box{
+            width: 600px;
+            height:auto;
+            background-color: #d3dff1;
+        }
+        .img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1{
+            font-family: "Nunito", sans-serif;
+            margin: 0%;
+            
+        }
+        h3{
+            font-family: "Nunito", sans-serif;
+            margin: 0%;
+            color: #282a2d;
+        }
+        p{
+            font-family: "Nunito", sans-serif;
+
+        }
+        h2{
+            font-family: "Nunito", sans-serif;
+
+        }
+        .button{
+            background-color:black;
+            color:white;
+            height: 24px;
+        }
+        @media only screen and (max-width: 768px){
+            .box{
+                width: auto;
+            }
+            h1{
+                padding-left: 3px;
+            }
+            h3{
+                padding-left: 3px;
+            }
+            p{
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+            h2{
+                padding-left: 3px;
+            }
+            .button{
+                padding-left: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <img class="img" src="val.gif" width="70%">
+            <h1 id="hh"></h1>
+            <h3>I want to tell you something</h3>
+            <p>As Valentine's Day approaches, my heart is overflowing with love for you, and I find myself compelled to express it in the most sincere and profound way possible. With each passing moment, my feelings for you grow stronger, and I am filled with an overwhelming desire to spend the rest of my life with you.
+            </p>
+            <p>From the moment we met, you captured my heart with your kindness, intelligence, and beautiful soul. You have brought so much joy, laughter, and love into my life, and I am endlessly grateful for the happiness you have brought me.</p>
+            <h2>i ❤️ You...</h2>
+            <button class="button" onclick="copyPageUrl()">Click To Copy Link</button>
+        </div>
+    </div>
+    <script>
+        var a = sessionStorage.getItem("a");
+        document.getElementById('hh').innerHTML = "Hello "  + a;
+        function copyPageUrl() {
+  var tempInput = document.createElement("input");
+  tempInput.value = window.location.href;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+  alert("Page URL copied to clipboard: ,Now You can Share This Link " + tempInput.value);
+}
+    </script>
+</body>
+</html>
